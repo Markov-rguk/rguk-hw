@@ -1,0 +1,9 @@
+#!/bin/bash
+date=$(date  +%Y-%m-%d)
+time=$(date  +%H:%M:%S)
+if [[ -d ~/$date ]]; then
+	touch ~/$date/$time
+else
+	mkdir ~/$date 
+	touch ~/$date/$time
+fi
